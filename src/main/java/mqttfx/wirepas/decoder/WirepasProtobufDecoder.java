@@ -56,7 +56,7 @@ public class WirepasProtobufDecoder extends AbstractPayloadDecoder {
 	private String modifyJsonFormat(String jsonStr) {
 		String result = jsonStr;
 		JSONObject jsonObj, wirepasJsonObj;
-		try {
+		/* try {
 			jsonObj = new JSONObject(jsonStr);
 			wirepasJsonObj = jsonObj.getJSONObject("wirepas");
 
@@ -74,9 +74,9 @@ public class WirepasProtobufDecoder extends AbstractPayloadDecoder {
 				rxEventObj.put("payload", bytesToHex(decoded));
 			} catch (JSONException e) {
 				// Nothing to do
-			}
+			}*/
 
-			result = jsonObj.toString(6);
+			result = jsonObj.toString(4);
 		} catch (JSONException e) {
 			result = "*** Packet do not have Wirepas field set ***";
 		}
