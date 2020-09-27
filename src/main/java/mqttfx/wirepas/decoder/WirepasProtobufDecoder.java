@@ -56,12 +56,12 @@ public class WirepasProtobufDecoder extends AbstractPayloadDecoder {
 	private String modifyJsonFormat(String jsonStr) {
 		String result = jsonStr;
 		JSONObject jsonObj, wirepasJsonObj;
-		/* try {
+		 try {
 			jsonObj = new JSONObject(jsonStr);
 			wirepasJsonObj = jsonObj.getJSONObject("wirepas");
 
 			// Try to see if it is a PacketReceived
-			try {
+		/*	try {
 				JSONObject rxEventObj = wirepasJsonObj.getJSONObject("packetReceivedEvent");
 
 				// Convert timestamp as date
