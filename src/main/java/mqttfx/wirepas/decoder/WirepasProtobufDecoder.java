@@ -61,7 +61,7 @@ public class WirepasProtobufDecoder extends AbstractPayloadDecoder {
 			wirepasJsonObj = jsonObj.getJSONObject("wirepas");
 
 			// Try to see if it is a PacketReceived
-		/*	try {
+			try {
 				JSONObject rxEventObj = wirepasJsonObj.getJSONObject("packetReceivedEvent");
 
 				// Convert timestamp as date
@@ -74,9 +74,9 @@ public class WirepasProtobufDecoder extends AbstractPayloadDecoder {
 				rxEventObj.put("payload", bytesToHex(decoded));
 			} catch (JSONException e) {
 				// Nothing to do
-			}*/
+			}
 
-			result = jsonObj.toString(4);
+			result = jsonObj.toString(1);
 		} catch (JSONException e) {
 			result = "*** Packet do not have Wirepas field set ***";
 		}
