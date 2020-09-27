@@ -76,7 +76,7 @@ public class WirepasProtobufDecoder extends AbstractPayloadDecoder {
 				// Nothing to do
 			}
 
-			result = jsonObj.toString();
+			result = jsonObj.String();
 		} catch (JSONException e) {
 			result = "*** Packet do not have Wirepas field set ***";
 		}
